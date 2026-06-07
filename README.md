@@ -61,12 +61,6 @@ The project demonstrates CRUD operations, RESTful API development, database rela
 
 * Postman
 
-### Frontend
-
-* React.js
-* Axios
-* React Router DOM
-
 ### Version Control
 
 * Git
@@ -161,7 +155,7 @@ DELETE /Courses/deleteCourse/{id}
 
 ### Clone Repository
 
-git clone https://github.com/yourusername/student-course-management-system.git
+git clone https://github.com/saikiran792/student-course-management-system.git
 
 ### Navigate to Project
 
