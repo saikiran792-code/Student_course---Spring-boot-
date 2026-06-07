@@ -56,15 +56,10 @@ public class StudentController {
         Student updateStudent = studentService.UpdateStudent(id,student);
         return new ResponseEntity<>(updateStudent,HttpStatus.OK);
     }
-
-
-
-
-
-
-
-
-
+    @GetMapping("/course/{cname}")
+    public List<Student> getStudentsByCourse(@PathVariable String cname){
+        return studentService.getStudentsByCourse(cname);
+    }
 
 
 

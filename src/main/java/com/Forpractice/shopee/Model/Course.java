@@ -1,12 +1,10 @@
 package com.Forpractice.shopee.Model;
-
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -18,4 +16,8 @@ public class Course {
     private String cname;
     private double fees;
 
-}
+    @OneToMany(mappedBy = "course",
+            cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<Student> students;
+ }

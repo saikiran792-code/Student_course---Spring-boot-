@@ -25,6 +25,7 @@ public class StudentService {
     }
 
     public List<Student> GetAllStudents() {
+
         return studentRepository.findAll();
     }
 
@@ -46,5 +47,8 @@ public class StudentService {
         existingstudent.setFavSub(student.getFavSub());
         Student save = studentRepository.save(existingstudent);
         return save;
+    }
+    public List<Student> getStudentsByCourse(String cname){
+        return studentRepository.findByCourse_Cname(cname);
     }
 }
